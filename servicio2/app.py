@@ -6,7 +6,7 @@ app2 = Flask(__name__)
 
 @app2.route('/<string:municipioid>/meteo', methods=['GET'])
 def get_meteo(municipioid):
-    url = "https://www.el-tiempo.net/api/json/v2/provincias/04/municipios/" + str(municipioid)
+    url = "https://www.el-tiempo.net/api/json/v2/provincias/03/municipios/" + str(municipioid)
     try:
         response = requests.get(url)
         response.raise_for_status()
